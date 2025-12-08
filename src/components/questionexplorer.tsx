@@ -47,6 +47,22 @@ const chartTypes = {
   ],
 } as const;
 
+const recommendedChartMap: Record<string, string[]> = {
+  q7_memories_childhood: ['Diverging Likert bar chart', 'Stacked 100% bar chart'],
+  q8_memories_influence_purchase_1_5: ['Horizontal stacked bar chart', 'Grouped bar chart'],
+  q9_importance_attributes: ['Grouped horizontal bar chart', 'Radar/Spider chart'],
+  q10_future_attribute_ranks: ['Average rank position chart', 'Heatmap'],
+  q11_nostalgia_little_tikes_0_100: ['Histogram', 'Box plot'],
+  q12_little_tikes_represents: ['Horizontal bar chart', 'Pie chart'],
+  q13_emotional_impact: ['Diverging Likert bar chart', 'Grouped horizontal stacked bar chart'],
+  q14_perception_brand: ['Diverging Likert bar chart', 'Side-by-side horizontal stacked bars'],
+  q15_lt_rating_vs_competitors: ['Radar/Spider chart', 'Grouped box plots'],
+  q16_competitor_brand_rating: ['Horizontal bar chart', 'Stacked 100% bar chart'],
+  q17_future_directions_excitement_1_4: ['Horizontal bar chart', 'Pie chart'],
+  q18_preference_vs_brands_1_3: ['Horizontal stacked 100% bar chart', 'Grouped bar chart'],
+  q19_nps_little_tikes_1_5: ['Horizontal stacked 100% bar chart', 'Grouped bar chart'],
+};
+
 const formatPercent = (value: number) => `${value.toFixed(1)}%`;
 
 const parseMultiSelect = (value: unknown): number[] => {
@@ -223,16 +239,40 @@ export const QuestionExplorer = () => {
   const matrixData = useMemo(() => buildMatrixData(definition, filteredData), [definition, filteredData]);
   const scaleData = useMemo(() => buildScaleData(definition, filteredData, baseCount), [definition, filteredData, baseCount]);
 
+  const seriesLabels = useMemo(() => {
+    if (definition.shape === 'scale') return ['Trend line', 'Bar overlay'];
+    if (definition.shape === 'matrix') return definition.options.map((opt) => opt.label);
+    return definition.options.map((opt) => opt.label);
+  }, [definition]);
+
   useEffect(() => {
     const options = chartTypes[definition.shape];
     if (!options.some((opt) => opt.value === chartType)) {
       setChartType(options[0].value);
     }
-    setColors(CORPORATE_PALETTE);
   }, [definition, chartType]);
+
+  useEffect(() => {
+    setColors((current) => {
+      if (current.length >= seriesLabels.length) return current;
+      const expanded = [...current];
+      while (expanded.length < seriesLabels.length) {
+        expanded.push(CORPORATE_PALETTE[expanded.length % CORPORATE_PALETTE.length]);
+      }
+      return expanded;
+    });
+  }, [seriesLabels]);
 
   const handleShuffleColors = () => {
     setColors((current) => shufflePalette(current));
+  };
+
+  const handleColorChange = (index: number, value: string) => {
+    setColors((current) => {
+      const next = [...current];
+      next[index] = value;
+      return next;
+    });
   };
 
   const handleExportImage = async () => {
@@ -263,13 +303,14 @@ export const QuestionExplorer = () => {
               innerRadius={80}
               outerRadius={140}
               label={(entry) => `${entry.option} (${formatPercent((entry.count / totalValue) * 100)})`}
+              labelLine={false}
             >
               {singleData.map((_, idx) => (
                 <Cell key={idx} fill={colors[idx % colors.length]} />
               ))}
             </Pie>
             <Tooltip content={<SingleTooltip />} />
-            <Legend />
+            <Legend verticalAlign="bottom" wrapperStyle={{ paddingTop: 16 }} height={48} />
           </PieChart>
         </ResponsiveContainer>
       );
@@ -277,7 +318,11 @@ export const QuestionExplorer = () => {
 
     return (
       <ResponsiveContainer width="100%" height={420}>
-        <BarChart data={singleData} layout={isHorizontal ? 'vertical' : 'horizontal'} margin={{ top: 20, right: 30, left: 20, bottom: 20 }}>
+        <BarChart
+          data={singleData}
+          layout={isHorizontal ? 'vertical' : 'horizontal'}
+          margin={{ top: 20, right: 30, left: 20, bottom: 72 }}
+        >
           <CartesianGrid strokeDasharray="3 3" />
           {isHorizontal ? (
             <>
@@ -291,7 +336,7 @@ export const QuestionExplorer = () => {
             </>
           )}
           <Tooltip content={<SingleTooltip />} />
-          <Legend />
+          <Legend verticalAlign="bottom" wrapperStyle={{ paddingTop: 16 }} height={48} />
           <Bar dataKey="count" name="Count" fill={colors[0]} radius={[6, 6, 0, 0]}>
             {singleData.map((_, idx) => (
               <Cell key={idx} fill={colors[idx % colors.length]} />
@@ -311,7 +356,7 @@ export const QuestionExplorer = () => {
         <BarChart
           data={matrixData}
           layout={isHorizontal ? 'vertical' : 'horizontal'}
-          margin={{ top: 20, right: 30, left: isHorizontal ? 200 : 20, bottom: 32 }}
+          margin={{ top: 20, right: 30, left: isHorizontal ? 200 : 20, bottom: 72 }}
         >
           <CartesianGrid strokeDasharray="3 3" />
           {isHorizontal ? (
@@ -326,7 +371,7 @@ export const QuestionExplorer = () => {
             </>
           )}
           <Tooltip content={<MatrixTooltip />} />
-          <Legend />
+          <Legend verticalAlign="bottom" wrapperStyle={{ paddingTop: 16 }} height={56} />
           {definition.shape === 'matrix' &&
             definition.options.map((opt, idx) => (
               <Bar key={opt.value} dataKey={opt.label} stackId={stackId} name={opt.label} fill={colors[idx % colors.length]} />
@@ -338,12 +383,12 @@ export const QuestionExplorer = () => {
 
   const renderScaleChart = () => (
     <ResponsiveContainer width="100%" height={420}>
-      <LineChart data={scaleData} margin={{ top: 20, right: 30, left: 20, bottom: 20 }}>
+      <LineChart data={scaleData} margin={{ top: 20, right: 30, left: 20, bottom: 72 }}>
         <CartesianGrid strokeDasharray="3 3" />
         <XAxis dataKey="bucket" interval={0} tick={{ fontSize: 12 }} label={{ value: 'Score bucket', position: 'insideBottom', offset: -5 }} />
         <YAxis domain={[0, 100]} tickFormatter={(v) => `${v}%`} label={{ value: 'Share of respondents (%)', angle: -90, position: 'insideLeft' }} />
         <Tooltip content={<ScaleTooltip />} />
-        <Legend />
+        <Legend verticalAlign="bottom" wrapperStyle={{ paddingTop: 16 }} height={48} />
         <Line type="monotone" dataKey="percent" name="Percent of respondents" stroke={colors[0]} strokeWidth={3} dot={{ r: 4, strokeWidth: 2 }} />
         <Bar dataKey="percent" fill={colors[1 % colors.length]} opacity={0.2} />
       </LineChart>
@@ -439,6 +484,49 @@ export const QuestionExplorer = () => {
             <p className="font-semibold text-gray-900">{definition.label}</p>
             <p>{definition.prompt}</p>
           </div>
+        </div>
+      </div>
+
+      <div className="mt-3 flex flex-wrap gap-2 items-start">
+        {recommendedChartMap[definition.id]?.length ? (
+          <>
+            <span className="text-sm font-semibold text-gray-700">Suggested visuals:</span>
+            {recommendedChartMap[definition.id].map((chart) => (
+              <span
+                key={chart}
+                className="inline-flex items-center rounded-full bg-blue-50 text-blue-700 px-3 py-1 text-xs font-semibold border border-blue-100"
+              >
+                {chart}
+              </span>
+            ))}
+          </>
+        ) : null}
+      </div>
+
+      <div className="mt-4 bg-gray-50 border border-gray-200 rounded-xl p-4 space-y-3">
+        <div className="flex items-center gap-2">
+          <Sparkles size={16} className="text-blue-500" />
+          <p className="text-sm font-semibold text-gray-800">Assign custom colors</p>
+        </div>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3">
+          {seriesLabels.map((label, idx) => (
+            <label key={label} className="flex items-center gap-3 text-sm font-medium text-gray-700">
+              <span className="min-w-[140px]">{label}</span>
+              <input
+                type="color"
+                value={colors[idx % colors.length]}
+                onChange={(e) => handleColorChange(idx, e.target.value)}
+                className="h-10 w-12 rounded border border-gray-300 cursor-pointer"
+              />
+              <input
+                type="text"
+                value={colors[idx % colors.length]}
+                onChange={(e) => handleColorChange(idx, e.target.value)}
+                className="flex-1 rounded border border-gray-300 px-2 py-1 text-gray-700 text-xs"
+                aria-label={`${label} color hex`}
+              />
+            </label>
+          ))}
         </div>
       </div>
 
