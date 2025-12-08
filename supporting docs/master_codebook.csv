@@ -1,0 +1,305 @@
+Column Name,Value/Code,Label/Meaning,Question Reference,Data Type (Bolt)
+children_2_7,1,Yes,Screener 1: Currently have at least one child ages 2-7,Binary
+children_2_7,0,No,Screener 1: Do not have children ages 2-7,Binary
+number_of_children,1,1 child,Screener 2: Total number of children,Categorical
+number_of_children,2,2 children,Screener 2: Total number of children,Categorical
+number_of_children,3,3 children,Screener 2: Total number of children,Categorical
+number_of_children,4,4+ children,Screener 2: Total number of children,Categorical
+number_of_children,5,I don't have kids,Screener 2: Total number of children (exclude from analysis),Categorical
+age_group,1,18-24,Q1: What is your age?,Categorical
+age_group,2,25-29,Q1: What is your age?,Categorical
+age_group,3,30-34,Q1: What is your age?,Categorical
+age_group,4,35-39,Q1: What is your age?,Categorical
+age_group,5,40-44,Q1: What is your age?,Categorical
+age_group,6,45+,Q1: What is your age?,Categorical
+gender,1,Male,Q2: What is your gender?,Categorical
+gender,2,Female,Q2: What is your gender?,Categorical
+gender,3,Non-binary / third gender,Q2: What is your gender?,Categorical
+gender,4,Prefer not to say,Q2: What is your gender?,Categorical
+location,1,Urban,Q3: Where do you live?,Categorical
+location,2,Suburban,Q3: Where do you live?,Categorical
+location,3,Rural,Q3: Where do you live?,Categorical
+household_income,1,"<$50,000",Q4: Total household income,Categorical
+household_income,2,"$50,000-$99,999",Q4: Total household income,Categorical
+household_income,3,"$100,000-$149,999",Q4: Total household income,Categorical
+household_income,4,"$150,000+",Q4: Total household income,Categorical
+household_income,5,Prefer not to answer,Q4: Total household income,Categorical
+platforms_selections,1,Instagram,Q5: Platforms for parenting tips (Multi-Select),Multi-Select
+platforms_selections,2,TikTok,Q5: Platforms for parenting tips (Multi-Select),Multi-Select
+platforms_selections,3,Facebook,Q5: Platforms for parenting tips (Multi-Select),Multi-Select
+platforms_selections,4,YouTube,Q5: Platforms for parenting tips (Multi-Select),Multi-Select
+platforms_selections,5,Parenting Blogs/Websites,Q5: Platforms for parenting tips (Multi-Select),Multi-Select
+platforms_selections,6,Texts or Group chats with friends,Q5: Platforms for parenting tips (Multi-Select),Multi-Select
+platforms_selections,7,Other (see platforms_other_text),Q5: Platforms for parenting tips (Multi-Select),Multi-Select
+platforms_selections,"1,3",Instagram + Facebook,Q5: Multi-select example,Multi-Select
+platforms_selections,"2,4,6",TikTok + YouTube + Texts,Q5: Multi-select example,Multi-Select
+platforms_other_text,User text,"Free text entry (e.g., Reddit, Pinterest)",Q5: Other platform text (if 7 selected),Text
+q6_childhood_brand_rank_little_tikes,1,Little Tikes ranked 1st (top childhood brand),Q6: Childhood toy brand ranking (Little Tikes position),Ordinal Numeric
+q6_childhood_brand_rank_little_tikes,2,Little Tikes ranked 2nd,Q6: Childhood toy brand ranking (Little Tikes position),Ordinal Numeric
+q6_childhood_brand_rank_little_tikes,3,Little Tikes ranked 3rd,Q6: Childhood toy brand ranking (Little Tikes position),Ordinal Numeric
+q6_childhood_brand_rank_little_tikes,4,Little Tikes ranked 4th,Q6: Childhood toy brand ranking (Little Tikes position),Ordinal Numeric
+q6_childhood_brand_rank_little_tikes,5,Little Tikes ranked 5th,Q6: Childhood toy brand ranking (Little Tikes position),Ordinal Numeric
+q6_childhood_brand_rank_little_tikes,6,Little Tikes ranked 6th (lowest),Q6: Childhood toy brand ranking (Little Tikes position),Ordinal Numeric
+q6_childhood_brand_rank_fisher_price,1,Fisher-Price ranked 1st (top childhood brand),Q6: Childhood toy brand ranking (Fisher-Price position),Ordinal Numeric
+q6_childhood_brand_rank_fisher_price,2,Fisher-Price ranked 2nd,Q6: Childhood toy brand ranking (Fisher-Price position),Ordinal Numeric
+q6_childhood_brand_rank_fisher_price,3,Fisher-Price ranked 3rd,Q6: Childhood toy brand ranking (Fisher-Price position),Ordinal Numeric
+q6_childhood_brand_rank_fisher_price,4,Fisher-Price ranked 4th,Q6: Childhood toy brand ranking (Fisher-Price position),Ordinal Numeric
+q6_childhood_brand_rank_fisher_price,5,Fisher-Price ranked 5th,Q6: Childhood toy brand ranking (Fisher-Price position),Ordinal Numeric
+q6_childhood_brand_rank_fisher_price,6,Fisher-Price ranked 6th (lowest),Q6: Childhood toy brand ranking (Fisher-Price position),Ordinal Numeric
+q6_childhood_brand_rank_playskool,1,Playskool ranked 1st (top childhood brand),Q6: Childhood toy brand ranking (Playskool position),Ordinal Numeric
+q6_childhood_brand_rank_playskool,2,Playskool ranked 2nd,Q6: Childhood toy brand ranking (Playskool position),Ordinal Numeric
+q6_childhood_brand_rank_playskool,3,Playskool ranked 3rd,Q6: Childhood toy brand ranking (Playskool position),Ordinal Numeric
+q6_childhood_brand_rank_playskool,4,Playskool ranked 4th,Q6: Childhood toy brand ranking (Playskool position),Ordinal Numeric
+q6_childhood_brand_rank_playskool,5,Playskool ranked 5th,Q6: Childhood toy brand ranking (Playskool position),Ordinal Numeric
+q6_childhood_brand_rank_playskool,6,Playskool ranked 6th (lowest),Q6: Childhood toy brand ranking (Playskool position),Ordinal Numeric
+q6_childhood_brand_rank_toynado,1,Toynado ranked 1st (top childhood brand),Q6: Childhood toy brand ranking (Toynado position),Ordinal Numeric
+q6_childhood_brand_rank_toynado,2,Toynado ranked 2nd,Q6: Childhood toy brand ranking (Toynado position),Ordinal Numeric
+q6_childhood_brand_rank_toynado,3,Toynado ranked 3rd,Q6: Childhood toy brand ranking (Toynado position),Ordinal Numeric
+q6_childhood_brand_rank_toynado,4,Toynado ranked 4th,Q6: Childhood toy brand ranking (Toynado position),Ordinal Numeric
+q6_childhood_brand_rank_toynado,5,Toynado ranked 5th,Q6: Childhood toy brand ranking (Toynado position),Ordinal Numeric
+q6_childhood_brand_rank_toynado,6,Toynado ranked 6th (lowest),Q6: Childhood toy brand ranking (Toynado position),Ordinal Numeric
+q6_childhood_brand_rank_lego,1,LEGO ranked 1st (top childhood brand),Q6: Childhood toy brand ranking (LEGO position),Ordinal Numeric
+q6_childhood_brand_rank_lego,2,LEGO ranked 2nd,Q6: Childhood toy brand ranking (LEGO position),Ordinal Numeric
+q6_childhood_brand_rank_lego,3,LEGO ranked 3rd,Q6: Childhood toy brand ranking (LEGO position),Ordinal Numeric
+q6_childhood_brand_rank_lego,4,LEGO ranked 4th,Q6: Childhood toy brand ranking (LEGO position),Ordinal Numeric
+q6_childhood_brand_rank_lego,5,LEGO ranked 5th,Q6: Childhood toy brand ranking (LEGO position),Ordinal Numeric
+q6_childhood_brand_rank_lego,6,LEGO ranked 6th (lowest),Q6: Childhood toy brand ranking (LEGO position),Ordinal Numeric
+q6_childhood_brand_rank_other,1,Other ranked 1st (top childhood brand),Q6: Childhood toy brand ranking (Other position),Ordinal Numeric
+q6_childhood_brand_rank_other,2,Other ranked 2nd,Q6: Childhood toy brand ranking (Other position),Ordinal Numeric
+q6_childhood_brand_rank_other,3,Other ranked 3rd,Q6: Childhood toy brand ranking (Other position),Ordinal Numeric
+q6_childhood_brand_rank_other,4,Other ranked 4th,Q6: Childhood toy brand ranking (Other position),Ordinal Numeric
+q6_childhood_brand_rank_other,5,Other ranked 5th,Q6: Childhood toy brand ranking (Other position),Ordinal Numeric
+q6_childhood_brand_rank_other,6,Other ranked 6th (lowest),Q6: Childhood toy brand ranking (Other position),Ordinal Numeric
+q6_childhood_brand_other_text,User text,"Free text (e.g., ""Mattel"")",Q6: Other brand name (conditional if Other was ranked),Text
+q10_rank_attributes_future_1,1,Quality & Durability ranked 1st (top priority),Q10: Rank future brand attributes (Quality & Durability position),Ordinal Numeric
+q10_rank_attributes_future_1,2,Quality & Durability ranked 2nd,Q10: Rank future brand attributes (Quality & Durability position),Ordinal Numeric
+q10_rank_attributes_future_1,3,Quality & Durability ranked 3rd,Q10: Rank future brand attributes (Quality & Durability position),Ordinal Numeric
+q10_rank_attributes_future_1,4,Quality & Durability ranked 4th,Q10: Rank future brand attributes (Quality & Durability position),Ordinal Numeric
+q10_rank_attributes_future_1,5,Quality & Durability ranked 5th,Q10: Rank future brand attributes (Quality & Durability position),Ordinal Numeric
+q10_rank_attributes_future_1,6,Quality & Durability ranked 6th (lowest priority),Q10: Rank future brand attributes (Quality & Durability position),Ordinal Numeric
+q10_rank_attributes_future_2,1,Safety & Trust ranked 1st (top priority),Q10: Rank future brand attributes (Safety & Trust position),Ordinal Numeric
+q10_rank_attributes_future_2,2,Safety & Trust ranked 2nd,Q10: Rank future brand attributes (Safety & Trust position),Ordinal Numeric
+q10_rank_attributes_future_2,3,Safety & Trust ranked 3rd,Q10: Rank future brand attributes (Safety & Trust position),Ordinal Numeric
+q10_rank_attributes_future_2,4,Safety & Trust ranked 4th,Q10: Rank future brand attributes (Safety & Trust position),Ordinal Numeric
+q10_rank_attributes_future_2,5,Safety & Trust ranked 5th,Q10: Rank future brand attributes (Safety & Trust position),Ordinal Numeric
+q10_rank_attributes_future_2,6,Safety & Trust ranked 6th (lowest priority),Q10: Rank future brand attributes (Safety & Trust position),Ordinal Numeric
+q10_rank_attributes_future_3,1,Active & Imaginative Play ranked 1st (top priority),Q10: Rank future brand attributes (Active & Imaginative Play position),Ordinal Numeric
+q10_rank_attributes_future_3,2,Active & Imaginative Play ranked 2nd,Q10: Rank future brand attributes (Active & Imaginative Play position),Ordinal Numeric
+q10_rank_attributes_future_3,3,Active & Imaginative Play ranked 3rd,Q10: Rank future brand attributes (Active & Imaginative Play position),Ordinal Numeric
+q10_rank_attributes_future_3,4,Active & Imaginative Play ranked 4th,Q10: Rank future brand attributes (Active & Imaginative Play position),Ordinal Numeric
+q10_rank_attributes_future_3,5,Active & Imaginative Play ranked 5th,Q10: Rank future brand attributes (Active & Imaginative Play position),Ordinal Numeric
+q10_rank_attributes_future_3,6,Active & Imaginative Play ranked 6th (lowest priority),Q10: Rank future brand attributes (Active & Imaginative Play position),Ordinal Numeric
+q10_rank_attributes_future_4,1,Educational & Developmental Value ranked 1st (top priority),Q10: Rank future brand attributes (Educational & Developmental Value position),Ordinal Numeric
+q10_rank_attributes_future_4,2,Educational & Developmental Value ranked 2nd,Q10: Rank future brand attributes (Educational & Developmental Value position),Ordinal Numeric
+q10_rank_attributes_future_4,3,Educational & Developmental Value ranked 3rd,Q10: Rank future brand attributes (Educational & Developmental Value position),Ordinal Numeric
+q10_rank_attributes_future_4,4,Educational & Developmental Value ranked 4th,Q10: Rank future brand attributes (Educational & Developmental Value position),Ordinal Numeric
+q10_rank_attributes_future_4,5,Educational & Developmental Value ranked 5th,Q10: Rank future brand attributes (Educational & Developmental Value position),Ordinal Numeric
+q10_rank_attributes_future_4,6,Educational & Developmental Value ranked 6th (lowest priority),Q10: Rank future brand attributes (Educational & Developmental Value position),Ordinal Numeric
+q10_rank_attributes_future_5,1,Use of Technology ranked 1st (top priority),Q10: Rank future brand attributes (Use of Technology position),Ordinal Numeric
+q10_rank_attributes_future_5,2,Use of Technology ranked 2nd,Q10: Rank future brand attributes (Use of Technology position),Ordinal Numeric
+q10_rank_attributes_future_5,3,Use of Technology ranked 3rd,Q10: Rank future brand attributes (Use of Technology position),Ordinal Numeric
+q10_rank_attributes_future_5,4,Use of Technology ranked 4th,Q10: Rank future brand attributes (Use of Technology position),Ordinal Numeric
+q10_rank_attributes_future_5,5,Use of Technology ranked 5th,Q10: Rank future brand attributes (Use of Technology position),Ordinal Numeric
+q10_rank_attributes_future_5,6,Use of Technology ranked 6th (lowest priority),Q10: Rank future brand attributes (Use of Technology position),Ordinal Numeric
+q10_rank_attributes_future_6,1,My Childhood Memories ranked 1st (top priority),Q10: Rank future brand attributes (My Childhood Memories position),Ordinal Numeric
+q10_rank_attributes_future_6,2,My Childhood Memories ranked 2nd,Q10: Rank future brand attributes (My Childhood Memories position),Ordinal Numeric
+q10_rank_attributes_future_6,3,My Childhood Memories ranked 3rd,Q10: Rank future brand attributes (My Childhood Memories position),Ordinal Numeric
+q10_rank_attributes_future_6,4,My Childhood Memories ranked 4th,Q10: Rank future brand attributes (My Childhood Memories position),Ordinal Numeric
+q10_rank_attributes_future_6,5,My Childhood Memories ranked 5th,Q10: Rank future brand attributes (My Childhood Memories position),Ordinal Numeric
+q10_rank_attributes_future_6,6,My Childhood Memories ranked 6th (lowest priority),Q10: Rank future brand attributes (My Childhood Memories position),Ordinal Numeric
+q7_memories_childhood_toys_vivid_memories_1_5,1,Strongly Disagree,Q7: I have vivid memories of playing with my favorite toys,Numeric Scale 1-5
+q7_memories_childhood_toys_vivid_memories_1_5,2,Disagree,Q7: I have vivid memories of playing with my favorite toys,Numeric Scale 1-5
+q7_memories_childhood_toys_vivid_memories_1_5,3,Neither agree nor disagree,Q7: I have vivid memories of playing with my favorite toys,Numeric Scale 1-5
+q7_memories_childhood_toys_vivid_memories_1_5,4,Agree,Q7: I have vivid memories of playing with my favorite toys,Numeric Scale 1-5
+q7_memories_childhood_toys_vivid_memories_1_5,5,Strongly Agree,Q7: I have vivid memories of playing with my favorite toys,Numeric Scale 1-5
+q7_memories_childhood_toys_reminds_childhood_1_5,1,Strongly Disagree,Q7: Seeing my favorite toys today reminds me of my childhood,Numeric Scale 1-5
+q7_memories_childhood_toys_reminds_childhood_1_5,2,Disagree,Q7: Seeing my favorite toys today reminds me of my childhood,Numeric Scale 1-5
+q7_memories_childhood_toys_reminds_childhood_1_5,3,Neither agree nor disagree,Q7: Seeing my favorite toys today reminds me of my childhood,Numeric Scale 1-5
+q7_memories_childhood_toys_reminds_childhood_1_5,4,Agree,Q7: Seeing my favorite toys today reminds me of my childhood,Numeric Scale 1-5
+q7_memories_childhood_toys_reminds_childhood_1_5,5,Strongly Agree,Q7: Seeing my favorite toys today reminds me of my childhood,Numeric Scale 1-5
+q7_memories_childhood_toys_want_child_experience_1_5,1,Strongly Disagree,Q7: I want my child to experience my favorite childhood toy,Numeric Scale 1-5
+q7_memories_childhood_toys_want_child_experience_1_5,2,Disagree,Q7: I want my child to experience my favorite childhood toy,Numeric Scale 1-5
+q7_memories_childhood_toys_want_child_experience_1_5,3,Neither agree nor disagree,Q7: I want my child to experience my favorite childhood toy,Numeric Scale 1-5
+q7_memories_childhood_toys_want_child_experience_1_5,4,Agree,Q7: I want my child to experience my favorite childhood toy,Numeric Scale 1-5
+q7_memories_childhood_toys_want_child_experience_1_5,5,Strongly Agree,Q7: I want my child to experience my favorite childhood toy,Numeric Scale 1-5
+q7_memories_childhood_toys_not_relevant_today_1_5,1,Strongly Disagree,Q7: My favorite childhood toys do not feel relevant today,Numeric Scale 1-5
+q7_memories_childhood_toys_not_relevant_today_1_5,2,Disagree,Q7: My favorite childhood toys do not feel relevant today,Numeric Scale 1-5
+q7_memories_childhood_toys_not_relevant_today_1_5,3,Neither agree nor disagree,Q7: My favorite childhood toys do not feel relevant today,Numeric Scale 1-5
+q7_memories_childhood_toys_not_relevant_today_1_5,4,Agree,Q7: My favorite childhood toys do not feel relevant today,Numeric Scale 1-5
+q7_memories_childhood_toys_not_relevant_today_1_5,5,Strongly Agree,Q7: My favorite childhood toys do not feel relevant today,Numeric Scale 1-5
+q8_memories_influence_purchase_1_5,1,Not at all,Q8: To what extent do childhood memories influence purchasing?,Numeric Scale 1-5
+q8_memories_influence_purchase_1_5,2,Slightly,Q8: To what extent do childhood memories influence purchasing?,Numeric Scale 1-5
+q8_memories_influence_purchase_1_5,3,Moderately,Q8: To what extent do childhood memories influence purchasing?,Numeric Scale 1-5
+q8_memories_influence_purchase_1_5,4,Very,Q8: To what extent do childhood memories influence purchasing?,Numeric Scale 1-5
+q8_memories_influence_purchase_1_5,5,Extremely,Q8: To what extent do childhood memories influence purchasing?,Numeric Scale 1-5
+q9_importance_quality_durability_1_5,1,Not at all important,Q9: Importance - Quality & Durability,Numeric Scale 1-5
+q9_importance_quality_durability_1_5,2,Slightly important,Q9: Importance - Quality & Durability,Numeric Scale 1-5
+q9_importance_quality_durability_1_5,3,Moderately important,Q9: Importance - Quality & Durability,Numeric Scale 1-5
+q9_importance_quality_durability_1_5,4,Very important,Q9: Importance - Quality & Durability,Numeric Scale 1-5
+q9_importance_quality_durability_1_5,5,Extremely important,Q9: Importance - Quality & Durability,Numeric Scale 1-5
+q9_importance_safety_trust_1_5,1,Not at all important,Q9: Importance - Safety & Trust,Numeric Scale 1-5
+q9_importance_safety_trust_1_5,2,Slightly important,Q9: Importance - Safety & Trust,Numeric Scale 1-5
+q9_importance_safety_trust_1_5,3,Moderately important,Q9: Importance - Safety & Trust,Numeric Scale 1-5
+q9_importance_safety_trust_1_5,4,Very important,Q9: Importance - Safety & Trust,Numeric Scale 1-5
+q9_importance_safety_trust_1_5,5,Extremely important,Q9: Importance - Safety & Trust,Numeric Scale 1-5
+q9_importance_active_imaginative_play_1_5,1,Not at all important,Q9: Importance - Active & Imaginative Play,Numeric Scale 1-5
+q9_importance_active_imaginative_play_1_5,2,Slightly important,Q9: Importance - Active & Imaginative Play,Numeric Scale 1-5
+q9_importance_active_imaginative_play_1_5,3,Moderately important,Q9: Importance - Active & Imaginative Play,Numeric Scale 1-5
+q9_importance_active_imaginative_play_1_5,4,Very important,Q9: Importance - Active & Imaginative Play,Numeric Scale 1-5
+q9_importance_active_imaginative_play_1_5,5,Extremely important,Q9: Importance - Active & Imaginative Play,Numeric Scale 1-5
+q9_importance_educational_developmental_1_5,1,Not at all important,Q9: Importance - Educational & Developmental Value,Numeric Scale 1-5
+q9_importance_educational_developmental_1_5,2,Slightly important,Q9: Importance - Educational & Developmental Value,Numeric Scale 1-5
+q9_importance_educational_developmental_1_5,3,Moderately important,Q9: Importance - Educational & Developmental Value,Numeric Scale 1-5
+q9_importance_educational_developmental_1_5,4,Very important,Q9: Importance - Educational & Developmental Value,Numeric Scale 1-5
+q9_importance_educational_developmental_1_5,5,Extremely important,Q9: Importance - Educational & Developmental Value,Numeric Scale 1-5
+q9_importance_use_of_technology_1_5,1,Not at all important,Q9: Importance - Use of Technology,Numeric Scale 1-5
+q9_importance_use_of_technology_1_5,2,Slightly important,Q9: Importance - Use of Technology,Numeric Scale 1-5
+q9_importance_use_of_technology_1_5,3,Moderately important,Q9: Importance - Use of Technology,Numeric Scale 1-5
+q9_importance_use_of_technology_1_5,4,Very important,Q9: Importance - Use of Technology,Numeric Scale 1-5
+q9_importance_use_of_technology_1_5,5,Extremely important,Q9: Importance - Use of Technology,Numeric Scale 1-5
+q9_importance_childhood_memories_1_5,1,Not at all important,Q9: Importance - My Childhood Memories,Numeric Scale 1-5
+q9_importance_childhood_memories_1_5,2,Slightly important,Q9: Importance - My Childhood Memories,Numeric Scale 1-5
+q9_importance_childhood_memories_1_5,3,Moderately important,Q9: Importance - My Childhood Memories,Numeric Scale 1-5
+q9_importance_childhood_memories_1_5,4,Very important,Q9: Importance - My Childhood Memories,Numeric Scale 1-5
+q9_importance_childhood_memories_1_5,5,Extremely important,Q9: Importance - My Childhood Memories,Numeric Scale 1-5
+q11_nostalgia_little_tikes_0_100,0,Not nostalgic,"Q11: Nostalgia slider (0-100, any integer)",Continuous Numeric 0-100
+q11_nostalgia_little_tikes_0_100,25,A little nostalgic,"Q11: Nostalgia slider (0-100, any integer)",Continuous Numeric 0-100
+q11_nostalgia_little_tikes_0_100,50,Nostalgic,"Q11: Nostalgia slider (0-100, any integer)",Continuous Numeric 0-100
+q11_nostalgia_little_tikes_0_100,75,Moderately nostalgic,"Q11: Nostalgia slider (0-100, any integer)",Continuous Numeric 0-100
+q11_nostalgia_little_tikes_0_100,100,Very nostalgic,"Q11: Nostalgia slider (0-100, any integer)",Continuous Numeric 0-100
+q11_nostalgia_little_tikes_0_100,Any 0-100,"Continuous range; e.g., 75 = Moderate Nostalgia",Q11: Nostalgia level,Continuous Numeric 0-100
+q12_little_tikes_represents,1,Quality & Durability,Q12: What most accurately represents Little Tikes toys?,Categorical
+q12_little_tikes_represents,2,Safety & Trust,Q12: What most accurately represents Little Tikes toys?,Categorical
+q12_little_tikes_represents,3,Unlocking Family Memories,Q12: What most accurately represents Little Tikes toys?,Categorical
+q12_little_tikes_represents,4,Innovation & Developmental Growth,Q12: What most accurately represents Little Tikes toys?,Categorical
+q12_little_tikes_represents,5,Active & Imaginative Play,Q12: What most accurately represents Little Tikes toys?,Categorical
+q13_emotional_impact_makes_nostalgic_1_5,1,Strongly Disagree,Q13: Little Tikes makes me feel nostalgic,Numeric Scale 1-5
+q13_emotional_impact_makes_nostalgic_1_5,2,Disagree,Q13: Little Tikes makes me feel nostalgic,Numeric Scale 1-5
+q13_emotional_impact_makes_nostalgic_1_5,3,Neither agree nor disagree,Q13: Little Tikes makes me feel nostalgic,Numeric Scale 1-5
+q13_emotional_impact_makes_nostalgic_1_5,4,Agree,Q13: Little Tikes makes me feel nostalgic,Numeric Scale 1-5
+q13_emotional_impact_makes_nostalgic_1_5,5,Strongly Agree,Q13: Little Tikes makes me feel nostalgic,Numeric Scale 1-5
+q13_emotional_impact_nostalgia_buy_likelihood_1_5,1,Strongly Disagree,Q13: Nostalgia makes me more likely to buy Little Tikes,Numeric Scale 1-5
+q13_emotional_impact_nostalgia_buy_likelihood_1_5,2,Disagree,Q13: Nostalgia makes me more likely to buy Little Tikes,Numeric Scale 1-5
+q13_emotional_impact_nostalgia_buy_likelihood_1_5,3,Neither agree nor disagree,Q13: Nostalgia makes me more likely to buy Little Tikes,Numeric Scale 1-5
+q13_emotional_impact_nostalgia_buy_likelihood_1_5,4,Agree,Q13: Nostalgia makes me more likely to buy Little Tikes,Numeric Scale 1-5
+q13_emotional_impact_nostalgia_buy_likelihood_1_5,5,Strongly Agree,Q13: Nostalgia makes me more likely to buy Little Tikes,Numeric Scale 1-5
+q13_emotional_impact_trust_vs_newer_1_5,1,Strongly Disagree,Q13: Nostalgia makes me trust Little Tikes more than newer brands,Numeric Scale 1-5
+q13_emotional_impact_trust_vs_newer_1_5,2,Disagree,Q13: Nostalgia makes me trust Little Tikes more than newer brands,Numeric Scale 1-5
+q13_emotional_impact_trust_vs_newer_1_5,3,Neither agree nor disagree,Q13: Nostalgia makes me trust Little Tikes more than newer brands,Numeric Scale 1-5
+q13_emotional_impact_trust_vs_newer_1_5,4,Agree,Q13: Nostalgia makes me trust Little Tikes more than newer brands,Numeric Scale 1-5
+q13_emotional_impact_trust_vs_newer_1_5,5,Strongly Agree,Q13: Nostalgia makes me trust Little Tikes more than newer brands,Numeric Scale 1-5
+q14_perception_brand_feels_modern_1_5,1,Strongly Disagree,Q14: Little Tikes feels modern and up-to-date,Numeric Scale 1-5
+q14_perception_brand_feels_modern_1_5,2,Disagree,Q14: Little Tikes feels modern and up-to-date,Numeric Scale 1-5
+q14_perception_brand_feels_modern_1_5,3,Neither agree nor disagree,Q14: Little Tikes feels modern and up-to-date,Numeric Scale 1-5
+q14_perception_brand_feels_modern_1_5,4,Agree,Q14: Little Tikes feels modern and up-to-date,Numeric Scale 1-5
+q14_perception_brand_feels_modern_1_5,5,Strongly Agree,Q14: Little Tikes feels modern and up-to-date,Numeric Scale 1-5
+q14_perception_brand_incorporate_technology_1_5,1,Strongly Disagree,Q14: Should incorporate more technology or digital play,Numeric Scale 1-5
+q14_perception_brand_incorporate_technology_1_5,2,Disagree,Q14: Should incorporate more technology or digital play,Numeric Scale 1-5
+q14_perception_brand_incorporate_technology_1_5,3,Neither agree nor disagree,Q14: Should incorporate more technology or digital play,Numeric Scale 1-5
+q14_perception_brand_incorporate_technology_1_5,4,Agree,Q14: Should incorporate more technology or digital play,Numeric Scale 1-5
+q14_perception_brand_incorporate_technology_1_5,5,Strongly Agree,Q14: Should incorporate more technology or digital play,Numeric Scale 1-5
+q14_perception_brand_keep_traditional_1_5,1,Strongly Disagree,Q14: Should keep traditional look and feel,Numeric Scale 1-5
+q14_perception_brand_keep_traditional_1_5,2,Disagree,Q14: Should keep traditional look and feel,Numeric Scale 1-5
+q14_perception_brand_keep_traditional_1_5,3,Neither agree nor disagree,Q14: Should keep traditional look and feel,Numeric Scale 1-5
+q14_perception_brand_keep_traditional_1_5,4,Agree,Q14: Should keep traditional look and feel,Numeric Scale 1-5
+q14_perception_brand_keep_traditional_1_5,5,Strongly Agree,Q14: Should keep traditional look and feel,Numeric Scale 1-5
+q14_perception_brand_trendy_social_media_1_5,1,Strongly Disagree,Q14: Featured in trendy or social-media-relevant ways,Numeric Scale 1-5
+q14_perception_brand_trendy_social_media_1_5,2,Disagree,Q14: Featured in trendy or social-media-relevant ways,Numeric Scale 1-5
+q14_perception_brand_trendy_social_media_1_5,3,Neither agree nor disagree,Q14: Featured in trendy or social-media-relevant ways,Numeric Scale 1-5
+q14_perception_brand_trendy_social_media_1_5,4,Agree,Q14: Featured in trendy or social-media-relevant ways,Numeric Scale 1-5
+q14_perception_brand_trendy_social_media_1_5,5,Strongly Agree,Q14: Featured in trendy or social-media-relevant ways,Numeric Scale 1-5
+q15_lt_rating_vs_competitors_quality_durability_0_100,0,Not nostalgic,Q15: LT vs Competitors - Quality & Durability,Continuous Numeric 0-100
+q15_lt_rating_vs_competitors_quality_durability_0_100,25,A little nostalgic,Q15: LT vs Competitors - Quality & Durability,Continuous Numeric 0-100
+q15_lt_rating_vs_competitors_quality_durability_0_100,50,Nostalgic,Q15: LT vs Competitors - Quality & Durability,Continuous Numeric 0-100
+q15_lt_rating_vs_competitors_quality_durability_0_100,75,Moderately nostalgic,Q15: LT vs Competitors - Quality & Durability,Continuous Numeric 0-100
+q15_lt_rating_vs_competitors_quality_durability_0_100,100,Very nostalgic,Q15: LT vs Competitors - Quality & Durability,Continuous Numeric 0-100
+q15_lt_rating_vs_competitors_quality_durability_0_100,Any 0-100,Continuous rating vs competitors,Q15: Quality & Durability,Continuous Numeric 0-100
+q15_lt_rating_vs_competitors_safety_trust_0_100,0,Not nostalgic,Q15: LT vs Competitors - Safety & Trust,Continuous Numeric 0-100
+q15_lt_rating_vs_competitors_safety_trust_0_100,25,A little nostalgic,Q15: LT vs Competitors - Safety & Trust,Continuous Numeric 0-100
+q15_lt_rating_vs_competitors_safety_trust_0_100,50,Nostalgic,Q15: LT vs Competitors - Safety & Trust,Continuous Numeric 0-100
+q15_lt_rating_vs_competitors_safety_trust_0_100,75,Moderately nostalgic,Q15: LT vs Competitors - Safety & Trust,Continuous Numeric 0-100
+q15_lt_rating_vs_competitors_safety_trust_0_100,100,Very nostalgic,Q15: LT vs Competitors - Safety & Trust,Continuous Numeric 0-100
+q15_lt_rating_vs_competitors_safety_trust_0_100,Any 0-100,Continuous rating vs competitors,Q15: Safety & Trust,Continuous Numeric 0-100
+q15_lt_rating_vs_competitors_active_imaginative_play_0_100,0,Not nostalgic,Q15: LT vs Competitors - Active & Imaginative Play,Continuous Numeric 0-100
+q15_lt_rating_vs_competitors_active_imaginative_play_0_100,25,A little nostalgic,Q15: LT vs Competitors - Active & Imaginative Play,Continuous Numeric 0-100
+q15_lt_rating_vs_competitors_active_imaginative_play_0_100,50,Nostalgic,Q15: LT vs Competitors - Active & Imaginative Play,Continuous Numeric 0-100
+q15_lt_rating_vs_competitors_active_imaginative_play_0_100,75,Moderately nostalgic,Q15: LT vs Competitors - Active & Imaginative Play,Continuous Numeric 0-100
+q15_lt_rating_vs_competitors_active_imaginative_play_0_100,100,Very nostalgic,Q15: LT vs Competitors - Active & Imaginative Play,Continuous Numeric 0-100
+q15_lt_rating_vs_competitors_active_imaginative_play_0_100,Any 0-100,Continuous rating vs competitors,Q15: Active & Imaginative Play,Continuous Numeric 0-100
+q15_lt_rating_vs_competitors_educational_developmental_0_100,0,Not nostalgic,Q15: LT vs Competitors - Educational & Developmental Value,Continuous Numeric 0-100
+q15_lt_rating_vs_competitors_educational_developmental_0_100,25,A little nostalgic,Q15: LT vs Competitors - Educational & Developmental Value,Continuous Numeric 0-100
+q15_lt_rating_vs_competitors_educational_developmental_0_100,50,Nostalgic,Q15: LT vs Competitors - Educational & Developmental Value,Continuous Numeric 0-100
+q15_lt_rating_vs_competitors_educational_developmental_0_100,75,Moderately nostalgic,Q15: LT vs Competitors - Educational & Developmental Value,Continuous Numeric 0-100
+q15_lt_rating_vs_competitors_educational_developmental_0_100,100,Very nostalgic,Q15: LT vs Competitors - Educational & Developmental Value,Continuous Numeric 0-100
+q15_lt_rating_vs_competitors_educational_developmental_0_100,Any 0-100,Continuous rating vs competitors,Q15: Educational & Developmental Value,Continuous Numeric 0-100
+q15_lt_rating_vs_competitors_use_of_technology_0_100,0,Not nostalgic,Q15: LT vs Competitors - Use of Technology,Continuous Numeric 0-100
+q15_lt_rating_vs_competitors_use_of_technology_0_100,25,A little nostalgic,Q15: LT vs Competitors - Use of Technology,Continuous Numeric 0-100
+q15_lt_rating_vs_competitors_use_of_technology_0_100,50,Nostalgic,Q15: LT vs Competitors - Use of Technology,Continuous Numeric 0-100
+q15_lt_rating_vs_competitors_use_of_technology_0_100,75,Moderately nostalgic,Q15: LT vs Competitors - Use of Technology,Continuous Numeric 0-100
+q15_lt_rating_vs_competitors_use_of_technology_0_100,100,Very nostalgic,Q15: LT vs Competitors - Use of Technology,Continuous Numeric 0-100
+q15_lt_rating_vs_competitors_use_of_technology_0_100,Any 0-100,Continuous rating vs competitors,Q15: Use of Technology,Continuous Numeric 0-100
+q15_lt_rating_vs_competitors_childhood_memories_0_100,0,Not nostalgic,Q15: LT vs Competitors - My Childhood Memories,Continuous Numeric 0-100
+q15_lt_rating_vs_competitors_childhood_memories_0_100,25,A little nostalgic,Q15: LT vs Competitors - My Childhood Memories,Continuous Numeric 0-100
+q15_lt_rating_vs_competitors_childhood_memories_0_100,50,Nostalgic,Q15: LT vs Competitors - My Childhood Memories,Continuous Numeric 0-100
+q15_lt_rating_vs_competitors_childhood_memories_0_100,75,Moderately nostalgic,Q15: LT vs Competitors - My Childhood Memories,Continuous Numeric 0-100
+q15_lt_rating_vs_competitors_childhood_memories_0_100,100,Very nostalgic,Q15: LT vs Competitors - My Childhood Memories,Continuous Numeric 0-100
+q15_lt_rating_vs_competitors_childhood_memories_0_100,Any 0-100,Continuous rating vs competitors,Q15: My Childhood Memories,Continuous Numeric 0-100
+q16_competitor_brand_rating_fisher_price_1_5,1,Poor (1 star),Q16: Brand Rating - Fisher-Price,Numeric Scale 1-5
+q16_competitor_brand_rating_fisher_price_1_5,2,Fair (2 stars),Q16: Brand Rating - Fisher-Price,Numeric Scale 1-5
+q16_competitor_brand_rating_fisher_price_1_5,3,Good (3 stars),Q16: Brand Rating - Fisher-Price,Numeric Scale 1-5
+q16_competitor_brand_rating_fisher_price_1_5,4,Very Good (4 stars),Q16: Brand Rating - Fisher-Price,Numeric Scale 1-5
+q16_competitor_brand_rating_fisher_price_1_5,5,Excellent (5 stars),Q16: Brand Rating - Fisher-Price,Numeric Scale 1-5
+q16_competitor_brand_rating_step2_1_5,1,Poor (1 star),Q16: Brand Rating - Step2,Numeric Scale 1-5
+q16_competitor_brand_rating_step2_1_5,2,Fair (2 stars),Q16: Brand Rating - Step2,Numeric Scale 1-5
+q16_competitor_brand_rating_step2_1_5,3,Good (3 stars),Q16: Brand Rating - Step2,Numeric Scale 1-5
+q16_competitor_brand_rating_step2_1_5,4,Very Good (4 stars),Q16: Brand Rating - Step2,Numeric Scale 1-5
+q16_competitor_brand_rating_step2_1_5,5,Excellent (5 stars),Q16: Brand Rating - Step2,Numeric Scale 1-5
+q16_competitor_brand_rating_melissa_doug_1_5,1,Poor (1 star),Q16: Brand Rating - Melissa & Doug,Numeric Scale 1-5
+q16_competitor_brand_rating_melissa_doug_1_5,2,Fair (2 stars),Q16: Brand Rating - Melissa & Doug,Numeric Scale 1-5
+q16_competitor_brand_rating_melissa_doug_1_5,3,Good (3 stars),Q16: Brand Rating - Melissa & Doug,Numeric Scale 1-5
+q16_competitor_brand_rating_melissa_doug_1_5,4,Very Good (4 stars),Q16: Brand Rating - Melissa & Doug,Numeric Scale 1-5
+q16_competitor_brand_rating_melissa_doug_1_5,5,Excellent (5 stars),Q16: Brand Rating - Melissa & Doug,Numeric Scale 1-5
+q16_competitor_brand_rating_lego_1_5,1,Poor (1 star),Q16: Brand Rating - LEGO,Numeric Scale 1-5
+q16_competitor_brand_rating_lego_1_5,2,Fair (2 stars),Q16: Brand Rating - LEGO,Numeric Scale 1-5
+q16_competitor_brand_rating_lego_1_5,3,Good (3 stars),Q16: Brand Rating - LEGO,Numeric Scale 1-5
+q16_competitor_brand_rating_lego_1_5,4,Very Good (4 stars),Q16: Brand Rating - LEGO,Numeric Scale 1-5
+q16_competitor_brand_rating_lego_1_5,5,Excellent (5 stars),Q16: Brand Rating - LEGO,Numeric Scale 1-5
+q16_competitor_brand_rating_tonies_1_5,1,Poor (1 star),Q16: Brand Rating - Tonies,Numeric Scale 1-5
+q16_competitor_brand_rating_tonies_1_5,2,Fair (2 stars),Q16: Brand Rating - Tonies,Numeric Scale 1-5
+q16_competitor_brand_rating_tonies_1_5,3,Good (3 stars),Q16: Brand Rating - Tonies,Numeric Scale 1-5
+q16_competitor_brand_rating_tonies_1_5,4,Very Good (4 stars),Q16: Brand Rating - Tonies,Numeric Scale 1-5
+q16_competitor_brand_rating_tonies_1_5,5,Excellent (5 stars),Q16: Brand Rating - Tonies,Numeric Scale 1-5
+q16_competitor_brand_rating_lovevery_1_5,1,Poor (1 star),Q16: Brand Rating - Lovevery,Numeric Scale 1-5
+q16_competitor_brand_rating_lovevery_1_5,2,Fair (2 stars),Q16: Brand Rating - Lovevery,Numeric Scale 1-5
+q16_competitor_brand_rating_lovevery_1_5,3,Good (3 stars),Q16: Brand Rating - Lovevery,Numeric Scale 1-5
+q16_competitor_brand_rating_lovevery_1_5,4,Very Good (4 stars),Q16: Brand Rating - Lovevery,Numeric Scale 1-5
+q16_competitor_brand_rating_lovevery_1_5,5,Excellent (5 stars),Q16: Brand Rating - Lovevery,Numeric Scale 1-5
+q16_competitor_brand_rating_toynado_1_5,1,Poor (1 star),Q16: Brand Rating - Toynado,Numeric Scale 1-5
+q16_competitor_brand_rating_toynado_1_5,2,Fair (2 stars),Q16: Brand Rating - Toynado,Numeric Scale 1-5
+q16_competitor_brand_rating_toynado_1_5,3,Good (3 stars),Q16: Brand Rating - Toynado,Numeric Scale 1-5
+q16_competitor_brand_rating_toynado_1_5,4,Very Good (4 stars),Q16: Brand Rating - Toynado,Numeric Scale 1-5
+q16_competitor_brand_rating_toynado_1_5,5,Excellent (5 stars),Q16: Brand Rating - Toynado,Numeric Scale 1-5
+q16_competitor_brand_rating_little_tikes_1_5,1,Poor (1 star),Q16: Brand Rating - Little Tikes,Numeric Scale 1-5
+q16_competitor_brand_rating_little_tikes_1_5,2,Fair (2 stars),Q16: Brand Rating - Little Tikes,Numeric Scale 1-5
+q16_competitor_brand_rating_little_tikes_1_5,3,Good (3 stars),Q16: Brand Rating - Little Tikes,Numeric Scale 1-5
+q16_competitor_brand_rating_little_tikes_1_5,4,Very Good (4 stars),Q16: Brand Rating - Little Tikes,Numeric Scale 1-5
+q16_competitor_brand_rating_little_tikes_1_5,5,Excellent (5 stars),Q16: Brand Rating - Little Tikes,Numeric Scale 1-5
+q17_future_directions_excitement_1_4,1,Re-introducing vintage model / collection,Q17: Which direction most excited?,Categorical
+q17_future_directions_excitement_1_4,2,Launching tech-enhanced play experiences,Q17: Which direction most excited?,Categorical
+q17_future_directions_excitement_1_4,3,Partnering with nostalgic pop-culture icons or shows,Q17: Which direction most excited?,Categorical
+q17_future_directions_excitement_1_4,4,Highlighting 'family play time' in advertising,Q17: Which direction most excited?,Categorical
+q18_preference_vs_brands_1_3,1,Much less than other brands,Q18: How much do you prefer LT?,Categorical
+q18_preference_vs_brands_1_3,2,Neither more nor less (neutral),Q18: How much do you prefer LT?,Categorical
+q18_preference_vs_brands_1_3,3,Much more than other brands,Q18: How much do you prefer LT?,Categorical
+q19_nps_little_tikes_1_5,1,Not likely,Q19: Likelihood to recommend LT to another parent,Numeric Scale 1-5
+q19_nps_little_tikes_1_5,2,Somewhat likely,Q19: Likelihood to recommend LT to another parent,Numeric Scale 1-5
+q19_nps_little_tikes_1_5,3,Likely,Q19: Likelihood to recommend LT to another parent,Numeric Scale 1-5
+q19_nps_little_tikes_1_5,4,Very likely,Q19: Likelihood to recommend LT to another parent,Numeric Scale 1-5
+q19_nps_little_tikes_1_5,5,Extremely likely,Q19: Likelihood to recommend LT to another parent,Numeric Scale 1-5
+q20_nps_explanation_text,User text,Free text entry,Q20: Why did you give that NPS score? Please explain.,Text
+pid_prolific_id,User text,Prolific participant ID (auto-populated),PID: Prolific ID,Text
+NaN,NaN,No response or skipped,All columns,Missing Data
+[NOTES],Multi-select comma-split,"E.g., ""1,3,5"" = Options 1, 3, 5 selected","Q5, Q12",Data Format
+[NOTES],Slider range 0-100,Any integer 0-100; not binned/discrete,"Q11, Q15",Data Format
+[NOTES],Conditional other_text,Only populate if 7 selected in Q5 or similar,"Q5, Q12",Data Format
+[NOTES],Exclude filter,Exclude number_of_children=5 from parent analyses,Screener 2,Analysis Note
