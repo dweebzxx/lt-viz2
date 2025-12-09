@@ -42,6 +42,7 @@ const chartTypes = {
     { value: 'bar', label: 'Standard Bar' },
   ],
   scale: [
+    { value: 'histogram', label: 'Histogram (bucketed)' },
     { value: 'line', label: 'Line Trend' },
     { value: 'bar', label: 'Vertical Bar' },
   ],
@@ -50,8 +51,8 @@ const chartTypes = {
 const recommendedChartMap: Record<string, string[]> = {
   q7_memories_childhood: ['Diverging Likert bar chart', 'Stacked 100% bar chart'],
   q8_memories_influence_purchase_1_5: ['Horizontal stacked bar chart', 'Grouped bar chart'],
-  q9_importance_attributes: ['Grouped horizontal bar chart', 'Radar/Spider chart'],
-  q10_future_attribute_ranks: ['Average rank position chart', 'Heatmap'],
+  q9_importance_attributes: ['Radar/Spider chart', 'Grouped horizontal bar chart'],
+  q10_future_attribute_ranks: ['Heatmap', 'Average rank position chart'],
   q11_nostalgia_little_tikes_0_100: ['Histogram', 'Box plot'],
   q12_little_tikes_represents: ['Horizontal bar chart', 'Pie chart'],
   q13_emotional_impact: ['Diverging Likert bar chart', 'Grouped horizontal stacked bar chart'],
@@ -253,6 +254,12 @@ export const QuestionExplorer = () => {
   }, [definition, chartType]);
 
   useEffect(() => {
+    if (definition.id === 'q11_nostalgia_little_tikes_0_100' && definition.shape === 'scale') {
+      setChartType('histogram');
+    }
+  }, [definition]);
+
+  useEffect(() => {
     setColors((current) => {
       if (current.length >= seriesLabels.length) return current;
       const expanded = [...current];
@@ -279,7 +286,7 @@ export const QuestionExplorer = () => {
     if (!chartRef.current) return;
     const canvas = await html2canvas(chartRef.current, {
       backgroundColor: '#ffffff',
-      scale: 3,
+      scale: Math.max(4, window.devicePixelRatio * 2),
       useCORS: true,
     });
     const link = document.createElement('a');
@@ -381,19 +388,45 @@ export const QuestionExplorer = () => {
     );
   };
 
-  const renderScaleChart = () => (
-    <ResponsiveContainer width="100%" height={420}>
-      <LineChart data={scaleData} margin={{ top: 20, right: 30, left: 20, bottom: 72 }}>
-        <CartesianGrid strokeDasharray="3 3" />
-        <XAxis dataKey="bucket" interval={0} tick={{ fontSize: 12 }} label={{ value: 'Score bucket', position: 'insideBottom', offset: -5 }} />
-        <YAxis domain={[0, 100]} tickFormatter={(v) => `${v}%`} label={{ value: 'Share of respondents (%)', angle: -90, position: 'insideLeft' }} />
-        <Tooltip content={<ScaleTooltip />} />
-        <Legend verticalAlign="bottom" wrapperStyle={{ paddingTop: 16 }} height={48} />
-        <Line type="monotone" dataKey="percent" name="Percent of respondents" stroke={colors[0]} strokeWidth={3} dot={{ r: 4, strokeWidth: 2 }} />
-        <Bar dataKey="percent" fill={colors[1 % colors.length]} opacity={0.2} />
-      </LineChart>
-    </ResponsiveContainer>
-  );
+  const renderScaleChart = () => {
+    if (chartType === 'histogram') {
+      const maxCount = Math.max(...scaleData.map((d) => d.count), 0);
+      return (
+        <ResponsiveContainer width="100%" height={420}>
+          <BarChart data={scaleData} margin={{ top: 20, right: 30, left: 20, bottom: 84 }} barCategoryGap={16}>
+            <CartesianGrid strokeDasharray="3 3" />
+            <XAxis
+              dataKey="bucket"
+              interval={0}
+              tick={{ fontSize: 12 }}
+              label={{ value: 'Score bucket', position: 'insideBottom', offset: -10 }}
+            />
+            <YAxis
+              domain={[0, maxCount + Math.ceil(maxCount * 0.1)]}
+              label={{ value: 'Respondent count', angle: -90, position: 'insideLeft' }}
+            />
+            <Tooltip content={<ScaleTooltip />} />
+            <Legend verticalAlign="bottom" wrapperStyle={{ paddingTop: 16 }} height={52} />
+            <Bar dataKey="count" name="Count" fill={colors[0]} radius={[6, 6, 0, 0]} />
+          </BarChart>
+        </ResponsiveContainer>
+      );
+    }
+
+    return (
+      <ResponsiveContainer width="100%" height={420}>
+        <LineChart data={scaleData} margin={{ top: 20, right: 30, left: 20, bottom: 72 }}>
+          <CartesianGrid strokeDasharray="3 3" />
+          <XAxis dataKey="bucket" interval={0} tick={{ fontSize: 12 }} label={{ value: 'Score bucket', position: 'insideBottom', offset: -5 }} />
+          <YAxis domain={[0, 100]} tickFormatter={(v) => `${v}%`} label={{ value: 'Share of respondents (%)', angle: -90, position: 'insideLeft' }} />
+          <Tooltip content={<ScaleTooltip />} />
+          <Legend verticalAlign="bottom" wrapperStyle={{ paddingTop: 16 }} height={48} />
+          <Line type="monotone" dataKey="percent" name="Percent of respondents" stroke={colors[0]} strokeWidth={3} dot={{ r: 4, strokeWidth: 2 }} />
+          <Bar dataKey="percent" fill={colors[1 % colors.length]} opacity={0.2} />
+        </LineChart>
+      </ResponsiveContainer>
+    );
+  };
 
   const renderChart = () => {
     if (definition.shape === 'matrix') return renderMatrixChart();
