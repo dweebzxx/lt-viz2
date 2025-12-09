@@ -228,6 +228,8 @@ export const QuestionExplorer = () => {
   const [selectedQuestionId, setSelectedQuestionId] = useState(getDefaultQuestionId());
   const [chartType, setChartType] = useState<string>('bar');
   const [colors, setColors] = useState<string[]>(CORPORATE_PALETTE);
+  const [chartHeight, setChartHeight] = useState<number>(520);
+  const [chartWidth, setChartWidth] = useState<number>(960);
   const chartRef = useRef<HTMLDivElement>(null);
 
   const definition = useMemo<QuestionDefinition>(() => {
@@ -301,7 +303,7 @@ export const QuestionExplorer = () => {
     if (chartType === 'pie') {
       const totalValue = singleData.reduce((sum, d) => sum + d.count, 0) || 1;
       return (
-        <ResponsiveContainer width="100%" height={420}>
+        <ResponsiveContainer width="100%" height={chartHeight}>
           <PieChart>
             <Pie
               data={singleData}
@@ -324,7 +326,7 @@ export const QuestionExplorer = () => {
     }
 
     return (
-      <ResponsiveContainer width="100%" height={420}>
+      <ResponsiveContainer width="100%" height={chartHeight}>
         <BarChart
           data={singleData}
           layout={isHorizontal ? 'vertical' : 'horizontal'}
@@ -359,7 +361,7 @@ export const QuestionExplorer = () => {
     const showPercentAxisLabel = 'Share of respondents (%)';
     const stackId = chartType === 'bar' ? undefined : 'total';
     return (
-      <ResponsiveContainer width="100%" height={520}>
+      <ResponsiveContainer width="100%" height={chartHeight}>
         <BarChart
           data={matrixData}
           layout={isHorizontal ? 'vertical' : 'horizontal'}
@@ -392,7 +394,7 @@ export const QuestionExplorer = () => {
     if (chartType === 'histogram') {
       const maxCount = Math.max(...scaleData.map((d) => d.count), 0);
       return (
-        <ResponsiveContainer width="100%" height={420}>
+        <ResponsiveContainer width="100%" height={chartHeight}>
           <BarChart data={scaleData} margin={{ top: 20, right: 30, left: 20, bottom: 84 }} barCategoryGap={16}>
             <CartesianGrid strokeDasharray="3 3" />
             <XAxis
@@ -414,7 +416,7 @@ export const QuestionExplorer = () => {
     }
 
     return (
-      <ResponsiveContainer width="100%" height={420}>
+      <ResponsiveContainer width="100%" height={chartHeight}>
         <LineChart data={scaleData} margin={{ top: 20, right: 30, left: 20, bottom: 72 }}>
           <CartesianGrid strokeDasharray="3 3" />
           <XAxis dataKey="bucket" interval={0} tick={{ fontSize: 12 }} label={{ value: 'Score bucket', position: 'insideBottom', offset: -5 }} />
@@ -563,8 +565,57 @@ export const QuestionExplorer = () => {
         </div>
       </div>
 
-      <div ref={chartRef} className="mt-6 bg-white rounded-xl border border-gray-100 p-4">
-        {renderChart()}
+      <div className="mt-4 bg-gray-50 border border-gray-200 rounded-xl p-4 space-y-4">
+        <div className="flex items-center gap-2">
+          <Sparkles size={16} className="text-blue-500" />
+          <p className="text-sm font-semibold text-gray-800">Resize the visualization</p>
+        </div>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <label className="flex flex-col gap-2 text-sm font-semibold text-gray-700">
+            <div className="flex items-center justify-between text-xs text-gray-500 font-normal">
+              <span>Width</span>
+              <span>{chartWidth}px</span>
+            </div>
+            <input
+              type="range"
+              min={640}
+              max={1280}
+              step={20}
+              value={chartWidth}
+              onChange={(e) => setChartWidth(Number(e.target.value))}
+              className="w-full accent-blue-600"
+              aria-label="Chart width in pixels"
+            />
+            <p className="text-xs text-gray-500 font-normal">Increase or decrease the available space for the chart.</p>
+          </label>
+          <label className="flex flex-col gap-2 text-sm font-semibold text-gray-700">
+            <div className="flex items-center justify-between text-xs text-gray-500 font-normal">
+              <span>Height</span>
+              <span>{chartHeight}px</span>
+            </div>
+            <input
+              type="range"
+              min={320}
+              max={820}
+              step={10}
+              value={chartHeight}
+              onChange={(e) => setChartHeight(Number(e.target.value))}
+              className="w-full accent-blue-600"
+              aria-label="Chart height in pixels"
+            />
+            <p className="text-xs text-gray-500 font-normal">Adjust vertical space to prevent labels from overlapping.</p>
+          </label>
+        </div>
+      </div>
+
+      <div className="mt-6 flex justify-center">
+        <div
+          ref={chartRef}
+          className="bg-white rounded-xl border border-gray-100 p-4 w-full transition-all duration-200"
+          style={{ maxWidth: `${chartWidth}px` }}
+        >
+          {renderChart()}
+        </div>
       </div>
     </section>
   );
