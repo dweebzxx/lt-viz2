@@ -51,8 +51,8 @@ const chartTypes = {
 const recommendedChartMap: Record<string, string[]> = {
   q7_memories_childhood: ['Diverging Likert bar chart', 'Stacked 100% bar chart'],
   q8_memories_influence_purchase_1_5: ['Horizontal stacked bar chart', 'Grouped bar chart'],
-  q9_importance_attributes: ['Grouped horizontal bar chart', 'Radar/Spider chart'],
-  q10_future_attribute_ranks: ['Average rank position chart', 'Heatmap'],
+  q9_importance_attributes: ['Radar/Spider chart', 'Grouped horizontal bar chart'],
+  q10_future_attribute_ranks: ['Heatmap', 'Average rank position chart'],
   q11_nostalgia_little_tikes_0_100: ['Histogram', 'Box plot'],
   q12_little_tikes_represents: ['Horizontal bar chart', 'Pie chart'],
   q13_emotional_impact: ['Diverging Likert bar chart', 'Grouped horizontal stacked bar chart'],
